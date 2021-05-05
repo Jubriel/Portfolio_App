@@ -143,9 +143,51 @@ class Next extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.lightBlue,
           elevation: 0,
         ),
-        body: Center());
+        body: Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+              SizedBox(height: 50),
+              SizedBox(width: 50),
+
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Row(children: [
+                  CircleAvatar(
+                      backgroundImage: AssetImage('images/man.jpg'),
+                      radius: 50),
+                  SizedBox(width: 20),
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Column(children: [
+                      Text('Sun Wukong',
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold)),
+                      SizedBox(height: 5),
+                      Text('Flutter/Dart Developer',
+                          style: TextStyle(fontSize: 13, color: Colors.grey)),
+                    ]),
+                  ),
+                ]),
+              ),
+              SizedBox(height: 30),
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Text(
+                    'With Over 5 weeks experience in Dart programming language and Flutter, I can comfortably build responsive mobile(Android and IOS) and web applications. I also have comprehensive knowledge and experience in Data analytics using Python programming and Tableau for visualization.',
+                    style: TextStyle(fontSize: 15, color: Colors.grey)),
+              ),
+              SizedBox(height: 20),
+              Text('My SuperPowers -----',
+                  style: TextStyle(fontSize: 18, color: Colors.blue)),
+              SizedBox(
+                height: 30,
+              ),
+              //GridDashboard()
+            ])));
   }
 }
